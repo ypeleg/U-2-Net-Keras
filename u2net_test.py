@@ -6,7 +6,6 @@ import numpy as np
 from PIL import Image
 from skimage import io
 from torchvision import transforms
-from torch.utils.data import DataLoader
 from data_loader import RescaleT, ToTensorLab, SalObjDataset, sal_generator
 
 from model import U2NET

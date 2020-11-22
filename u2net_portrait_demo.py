@@ -2,11 +2,9 @@
 
 import os
 import cv2
-import torch
 import numpy as np
 from glob import glob
 from model import U2NET
-from torch.autograd import Variable
 
 def detect_single_face(face_cascade,img):
     # Convert into grayscale
@@ -83,14 +81,14 @@ def crop_face(img, face):
     return im_face
 
 def normPRED(d):
-    ma = torch.max(d)
-    mi = torch.min(d)
+    ma = np.max(d)
+    mi = np.min(d)
 
     dn = (d-mi)/(ma-mi)
 
     return dn
 
-def inference(net,input):
+def inference(net, input):
 
     # normalize the input
     tmpImg = np.zeros((input.shape[0],input.shape[1],3))
@@ -103,26 +101,13 @@ def inference(net,input):
     # convert BGR to RGB
     tmpImg = tmpImg.transpose((2, 0, 1))
     tmpImg = tmpImg[np.newaxis,:,:,:]
-    tmpImg = torch.from_numpy(tmpImg)
-
-    # convert numpy array to torch tensor
-    tmpImg = tmpImg.type(torch.FloatTensor)
-
-    if torch.cuda.is_available():
-        tmpImg = Variable(tmpImg.cuda())
-    else:
-        tmpImg = Variable(tmpImg)
 
     # inference
-    d1,d2,d3,d4,d5,d6,d7= net(tmpImg)
+    d1,d2,d3,d4,d5,d6,d7= net.predict(tmpImg)
 
     # normalization
     pred = 1.0 - d1[:,0,:,:]
     pred = normPRED(pred)
-
-    # convert torch tensor to numpy array
-    pred = pred.squeeze()
-    pred = pred.cpu().data.numpy()
 
     del d1,d2,d3,d4,d5,d6,d7
 
@@ -145,10 +130,7 @@ def main():
 
     # load u2net_portrait model
     net = U2NET(3,1)
-    net.load_state_dict(torch.load(model_dir))
-    if torch.cuda.is_available():
-        net.cuda()
-    net.eval()
+    net.load(model_dir)
 
     # do the inference one-by-one
     for i in range(0,len(im_list)):
@@ -160,7 +142,7 @@ def main():
         height,width = img.shape[0:2]
         face = detect_single_face(face_cascade,img)
         im_face = crop_face(img, face)
-        im_portrait = inference(net,im_face)
+        im_portrait = inference(net, im_face)
 
         # save the output
         cv2.imwrite(out_dir+"/"+im_list[i].split('/')[-1][0:-4]+'.png',(im_portrait*255).astype(np.uint8))
