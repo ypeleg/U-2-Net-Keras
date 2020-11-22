@@ -1,12 +1,10 @@
 
 
-
-
+import tensorflow as tf
+import keras.backend as K
 from keras.models import Model
 from keras.layers import Layer
-from keras.layers import Conv2D, BatchNormalization, ReLU, concatenate, Activation, MaxPool2D
-import torch.nn.functional as F
-
+from keras.layers import Conv2D, BatchNormalization, ReLU, concatenate, Activation, MaxPool2D, Lambda
 
 
 class REBNCONV(Layer):
@@ -21,12 +19,11 @@ class REBNCONV(Layer):
         xout = self.relu_s1(self.bn_s1(self.conv_s1(hx)))
         return xout
 
-## upsample tensor 'src' to have the same spatial size with tensor 'tar'
-def _upsample_like(src,tar):
+def _upsample_like(tensorA, tensorB):
+    sB = K.int_shape(tensorB)
+    def resize_like(tensor, sB): return tf.compat.v1.image.resize_bilinear(tensor, sB[1:3], align_corners=True)
+    return Lambda(resize_like, arguments={'sB': sB})(tensorA)
 
-    src = F.upsample(src,size=tar.shape[2:],mode='bilinear')
-
-    return src
 
 class RSU7(Layer):
 

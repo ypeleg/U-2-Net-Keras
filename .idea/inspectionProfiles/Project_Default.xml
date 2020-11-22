@@ -1,0 +1,79 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="AngularAmbiguousComponentTag" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularCliAddDependency" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AngularIncorrectTemplateDefinition" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularInsecureBindingToEvent" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AngularInvalidAnimationTriggerAssignment" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularInvalidEntryComponent" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularInvalidExpressionResultType" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AngularInvalidI18nAttribute" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AngularInvalidImportedOrDeclaredSymbol" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularInvalidSelector" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularInvalidTemplateReferenceVariable" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularMissingEventHandler" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularMissingOrInvalidDeclarationInModule" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularMultipleStructuralDirectives" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularNonEmptyNgContent" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularRecursiveModuleImportExport" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularUndefinedBinding" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularUndefinedModuleExport" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AngularUndefinedTag" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="JSHint" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="44">
+            <item index="0" class="java.lang.String" itemvalue="gensim" />
+            <item index="1" class="java.lang.String" itemvalue="numba" />
+            <item index="2" class="java.lang.String" itemvalue="pydot" />
+            <item index="3" class="java.lang.String" itemvalue="mlxtend" />
+            <item index="4" class="java.lang.String" itemvalue="networkx" />
+            <item index="5" class="java.lang.String" itemvalue="joblib" />
+            <item index="6" class="java.lang.String" itemvalue="scikit-learn" />
+            <item index="7" class="java.lang.String" itemvalue="TA-Lib" />
+            <item index="8" class="java.lang.String" itemvalue="nltk" />
+            <item index="9" class="java.lang.String" itemvalue="numpy" />
+            <item index="10" class="java.lang.String" itemvalue="catboost" />
+            <item index="11" class="java.lang.String" itemvalue="spacy" />
+            <item index="12" class="java.lang.String" itemvalue="tensorflow" />
+            <item index="13" class="java.lang.String" itemvalue="pyvis" />
+            <item index="14" class="java.lang.String" itemvalue="tslearn" />
+            <item index="15" class="java.lang.String" itemvalue="ibapi" />
+            <item index="16" class="java.lang.String" itemvalue="feather-format" />
+            <item index="17" class="java.lang.String" itemvalue="word2number" />
+            <item index="18" class="java.lang.String" itemvalue="pygraphviz" />
+            <item index="19" class="java.lang.String" itemvalue="graphviz" />
+            <item index="20" class="java.lang.String" itemvalue="keras" />
+            <item index="21" class="java.lang.String" itemvalue="faulthandler" />
+            <item index="22" class="java.lang.String" itemvalue="gplearn" />
+            <item index="23" class="java.lang.String" itemvalue="xgboost" />
+            <item index="24" class="java.lang.String" itemvalue="pathos" />
+            <item index="25" class="java.lang.String" itemvalue="opencv-python" />
+            <item index="26" class="java.lang.String" itemvalue="keras-vggface" />
+            <item index="27" class="java.lang.String" itemvalue="colored-traceback" />
+            <item index="28" class="java.lang.String" itemvalue="tsfresh" />
+            <item index="29" class="java.lang.String" itemvalue="pandas-datareader" />
+            <item index="30" class="java.lang.String" itemvalue="Quandl" />
+            <item index="31" class="java.lang.String" itemvalue="yahoo-finance" />
+            <item index="32" class="java.lang.String" itemvalue="pandas" />
+            <item index="33" class="java.lang.String" itemvalue="tqdm" />
+            <item index="34" class="java.lang.String" itemvalue="Theano" />
+            <item index="35" class="java.lang.String" itemvalue="pebble" />
+            <item index="36" class="java.lang.String" itemvalue="Django" />
+            <item index="37" class="java.lang.String" itemvalue="matplotlib" />
+            <item index="38" class="java.lang.String" itemvalue="bokeh" />
+            <item index="39" class="java.lang.String" itemvalue="statsmodels" />
+            <item index="40" class="java.lang.String" itemvalue="pygithub" />
+            <item index="41" class="java.lang.String" itemvalue="lightgbm" />
+            <item index="42" class="java.lang.String" itemvalue="setproctitle" />
+            <item index="43" class="java.lang.String" itemvalue="textblob" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
